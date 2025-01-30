@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* 🎥 Background Video */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full screen */
+    z-index: -1; /* Keeps it behind content */
+}
+
+/* Login Box */
+.login-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: rgba(256, 256, 256, 0.1); /* Transparent white */
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 1; /* Keeps it above video */
+}
+
+/* Input Fields */
+.input-box {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+
+/* Remember Me (Alag Line) */
+.remember {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+/* Forgot Password (Alag Line) */
+.forgot {
+    width: 100%;
+    text-align: right; /* Right-side alignment */
+    margin-bottom: 20px; /* Space before button */
+}
+
+.forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+
+/* Login Button */
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+
+
+
+/* Register Link */
+.register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: solid;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .login-box {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+}
+
